@@ -101,6 +101,7 @@ const Farms: React.FC = () => {
       </Heading>
       <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <div>
+        <Text>Hello darth</Text>
         <Divider />
         <FlexLayout>
           <Route exact path={`${path}`}>
