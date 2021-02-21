@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronRightIcon, Button as UIKitButton, Flex, AutoRenewIcon, ChevronDownIcon } from '@disruptcapital/wifeswap-uikit'
+import {
+  ChevronRightIcon,
+  Button as UIKitButton,
+  Flex,
+  AutoRenewIcon,
+  ChevronDownIcon,
+} from '@disruptcapital/wifeswap-uikit'
 import useI18n from 'hooks/useI18n'
 
 interface ApproveConfirmButtonsProps {
