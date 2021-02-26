@@ -31,11 +31,6 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/lottery',
-  },
-  {
     label: 'Collectibles',
     icon: 'NftIcon',
     href: '/collectibles',

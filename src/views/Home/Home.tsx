@@ -4,12 +4,11 @@ import { Heading, Text, BaseLayout } from '@disruptcapital/wifeswap-uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
-import LotteryCard from 'views/Home/components/LotteryCard'
+import NFTCard from 'views/Home/components/NFTCard'
 import CakeStats from 'views/Home/components/CakeStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
-import WinCard from 'views/Home/components/WinCard'
 
 const Hero = styled.div`
   align-items: center;
@@ -90,12 +89,11 @@ const Home: React.FC = () => {
       <div>
         <Cards>
           <FarmStakingCard />
-          <LotteryCard />
+          <NFTCard/>
         </Cards>
         <CTACards>
           <EarnAPYCard />
           <EarnAssetCard />
-          <WinCard />
         </CTACards>
         <Cards>
           <CakeStats />
