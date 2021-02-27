@@ -4,15 +4,11 @@ import { Heading, Text, BaseLayout } from '@disruptcapital/wifeswap-uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
-import NFTCard from 'views/Home/components/NFTCard'
-import CakeStats from 'views/Home/components/CakeStats'
-import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
-import EarnAPYCard from 'views/Home/components/EarnAPYCard'
-import EarnAssetCard from 'views/Home/components/EarnAssetCard'
+import WifeStats from 'views/Home/components/WifeStats'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/pan-tbd-mobile.svg');
+  background-image: url('/images/wife.svg');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -24,7 +20,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/tbd.svg'), url('/images/pan-tbd.svg');
+    background-image: url('/images/wife.svg'), url('/images/wife.svg');
     background-position: left center, right center;
     height: 165px;
     padding-top: 0;
@@ -85,19 +81,12 @@ const Home: React.FC = () => {
           {TranslateString(576, 'WifeSwap')}
         </Heading>
         <Text>{TranslateString(578, 'Do you feel married to your bags? Come swap them here!')}</Text>
+        <Text>{TranslateString(999, 'The Most Ball & Chainiest Yield Farm AMM on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
-          <NFTCard/>
-        </Cards>
-        <CTACards>
-          <EarnAPYCard />
-          <EarnAssetCard />
-        </CTACards>
-        <Cards>
-          <CakeStats />
-          <TotalValueLockedCard />
+          <WifeStats />
         </Cards>
       </div>
     </Page>

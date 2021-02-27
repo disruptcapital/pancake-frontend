@@ -10,13 +10,33 @@ import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cake-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
   min-height: 376px;
 `
 
+const Placeholder = styled.div`
+  height: 80px;
+  width: 64px;
+`
+
+const LollipopBg = styled.div`
+  background-image: url(/images/lollipop-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  top: -240px;
+  min-height: 240px;
+  right: 15px;
+  height: 100%;
+  width: 100%;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    top: -300px;
+    min-height: 300px;
+  }
+`
+
 const Block = styled.div`
+  position: relative;
   margin-bottom: 16px;
 `
 
@@ -59,15 +79,16 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
+        {/* <CardImage src="/images/cake.svg" alt="wife logo" width={64} height={64} /> */}
         <Block>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label>{TranslateString(544, 'WIFE to Harvest')}:</Label>
           <CakeHarvestBalance />
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+          <Label>{TranslateString(546, 'WIFE in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
+        <Placeholder/>
         <Actions>
           {account ? (
             <Button
@@ -77,11 +98,14 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
+                ? TranslateString(548, 'Collecting WIFE')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (
-            <UnlockButton fullWidth />
+            <Block>
+              <LollipopBg/>
+              <UnlockButton fullWidth />
+            </Block>
           )}
         </Actions>
       </CardBody>
