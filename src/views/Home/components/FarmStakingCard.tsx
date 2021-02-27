@@ -88,7 +88,7 @@ const FarmedStakingCard = () => {
           <Label>{TranslateString(546, 'WIFE in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
-        <Placeholder/>
+        <Placeholder />
         <Actions>
           {account ? (
             <Button
@@ -103,7 +103,7 @@ const FarmedStakingCard = () => {
             </Button>
           ) : (
             <Block>
-              <LollipopBg/>
+              <LollipopBg />
               <UnlockButton fullWidth />
             </Block>
           )}

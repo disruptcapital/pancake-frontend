@@ -47,22 +47,22 @@ const WifeStats = () => {
           <Text fontSize="14px">{TranslateString(540, 'New WIFE/block')}</Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
-        </CardBody>
-        <CardBody>
-          <Heading size="lg" mb="24px">
-            {TranslateString(762, 'Total Value Locked (TVL)')}
-          </Heading>
-          {data ? (
-            <>
-              <Heading size="xl">{`$${tvl}`}</Heading>
-              <Text color="textSubtle">{TranslateString(764, 'Across all Farms and Pools')}</Text>
-            </>
-          ) : (
-            <>
-              <Skeleton height={66} />
-            </>
-          )}
-        </CardBody>
+      </CardBody>
+      <CardBody>
+        <Heading size="lg" mb="24px">
+          {TranslateString(762, 'Total Value Locked (TVL)')}
+        </Heading>
+        {data ? (
+          <>
+            <Heading size="xl">{`$${tvl}`}</Heading>
+            <Text color="textSubtle">{TranslateString(764, 'Across all Farms and Pools')}</Text>
+          </>
+        ) : (
+          <>
+            <Skeleton height={66} />
+          </>
+        )}
+      </CardBody>
     </StyledWifeStats>
   )
 }
