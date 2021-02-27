@@ -8,9 +8,10 @@ import WifeStats from 'views/Home/components/WifeStats'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/wife.svg');
+  background-image: url('/images/lolly.svg');
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,11 +20,12 @@ const Hero = styled.div`
   padding-top: 116px;
   text-align: center;
 
-  ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/wife.svg'), url('/images/wife.svg');
+  ${({ theme }) => theme.mediaQueries.xl} {
+    background-image: url('/images/lolly.svg'), url('/images/lolly-left.svg');
     background-position: left center, right center;
-    height: 165px;
+    height: 125px;
     padding-top: 0;
+    background-size: auto;
   }
 `
 
@@ -81,7 +83,6 @@ const Home: React.FC = () => {
           {TranslateString(576, 'WifeSwap')}
         </Heading>
         <Text>{TranslateString(578, 'Do you feel married to your bags? Come swap them here!')}</Text>
-        <Text>{TranslateString(999, 'The Most Ball & Chainiest Yield Farm AMM on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>
