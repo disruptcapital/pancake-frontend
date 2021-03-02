@@ -76,20 +76,23 @@ const Farm: React.FC = () => {
     (pool) => pool.userData && new BigNumber(pool.userData.stakedBalance).isGreaterThan(0),
   )
 
+  const HeroImg = styled.img`
+    text-align: center;
+  `
   return (
     <Page>
       <Hero>
         <div>
           <Heading as="h1" size="xxl" mb="16px">
-            {TranslateString(738, 'Syrup Pool')}
+            {TranslateString(738, 'The Community Chest')}
           </Heading>
           <ul>
-            <li>{TranslateString(580, 'Stake CAKE to earn new tokens.')}</li>
+            <li>{TranslateString(580, 'Stake WIFE to earn new tokens.')}</li>
             <li>{TranslateString(486, 'You can unstake at any time.')}</li>
             <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
           </ul>
         </div>
-        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
+        <HeroImg src="/images/bikini-top.svg" alt="wife logo" width={256} height={256} />
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />

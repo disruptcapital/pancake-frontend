@@ -13,11 +13,6 @@ const StyledFarmStakingCard = styled(Card)`
   min-height: 376px;
 `
 
-const Placeholder = styled.div`
-  height: 80px;
-  width: 64px;
-`
-
 const LollipopBg = styled.div`
   background-image: url(/images/lollipop-bg.svg);
   background-repeat: no-repeat;
@@ -79,7 +74,7 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        {/* <CardImage src="/images/cake.svg" alt="wife logo" width={64} height={64} /> */}
+        <CardImage src="/images/lollipop-coin.svg" alt="wife logo" width={64} height={64} />
         <Block>
           <Label>{TranslateString(544, 'WIFE to Harvest')}:</Label>
           <CakeHarvestBalance />
@@ -88,7 +83,6 @@ const FarmedStakingCard = () => {
           <Label>{TranslateString(546, 'WIFE in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
-        <Placeholder />
         <Actions>
           {account ? (
             <Button
